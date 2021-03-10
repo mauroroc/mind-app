@@ -1,6 +1,9 @@
 <h1>Teste de Contents</h1>
 
+<%= link_to 'New Content', new_content_path %>
+
 <%= @contents.each do |content| %>
     Title: <%= content.title %>
     Description: <%= content.description %>
+    <%= link_to 'Edit Content', edit_content_path(content) %>
 <% end %>
